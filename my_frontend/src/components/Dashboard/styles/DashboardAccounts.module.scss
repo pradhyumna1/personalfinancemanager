@@ -1,0 +1,204 @@
+.dashboardAccounts {
+  padding: 20px;
+  background-color: #1f2937;
+  border-radius: 8px;
+  color: #ffffff;
+
+  .title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 16px;
+    text-align: center;
+  }
+
+  .accountType {
+    margin-bottom: 16px;
+  }
+
+  .dropdownHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px;
+    background-color: #374151;
+    border-radius: 8px;
+    transition: background-color 0.2s;
+
+    &:hover {
+      background-color: #4b5563;
+    }
+
+    /* Default arrow for collapsed state */
+    &::after {
+      content: "▼"; /* Down arrow */
+      font-size: 1rem;
+      color: #ffffff;
+      transition: transform 0.2s ease; /* Smooth transition */
+    }
+
+    /* Expanded state changes arrow direction */
+    &.expanded::after {
+      content: "▲"; /* Up arrow */
+      transform: rotate(0deg); /* Rotate only 180 degrees */
+    }
+  }
+
+  .accountTypeHeader {
+    display: flex;
+    align-items: center;
+  }
+
+  .accountTypeIcon {
+    width: 34px;
+    height: 34px;
+    margin-right: 8px;
+  }
+
+  .accountHeader {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #e5e7eb;
+  }
+
+  .totalBalance {
+    font-weight: bold;
+    color: #10b981;
+  }
+
+  .totalBalanceRed {
+    font-weight: bold;
+    color: #ef4444;
+  }
+
+  .account {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px;
+    background-color: #2d3748;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    transition: background-color 0.2s;
+
+    &:hover {
+      background-color: #3b4252;
+    }
+  }
+
+  .logo {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    background-color: #ffffff;
+    border-radius: 8px;
+    margin-right: 12px;
+    flex-shrink: 0;
+  }
+
+  .accountInfo {
+    display: flex;
+    align-items: center;
+    flex: 1;
+  }
+
+  .accountName {
+    font-weight: bold;
+    margin-right: 12px;
+    color: #ffffff;
+  }
+
+  .balance {
+    font-size: 0.9rem;
+    color: #cbd5e1;
+    text-align: right;
+  }
+
+  .netBalanceBox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px;
+    background-color: #2d3748;
+    border-radius: 8px;
+    margin-bottom: 16px;
+
+    &:hover {
+      background-color: #3b4252;
+    }
+  }
+
+  .infoHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .netBalanceText {
+    font-weight: bold;
+    font-size: 1rem;
+    margin-left: 8px;
+
+    &.positive {
+      color: #10b981;
+    }
+
+    &.negative {
+      color: #ef4444;
+    }
+  }
+
+  .infoIcon {
+    font-size: 0.9rem;
+    color: #cbd5e1;
+    margin-left: 8px;
+    cursor: help;
+    background-color: #374151;
+    padding: 4px 6px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 1.2;
+
+    &:hover {
+      background-color: #4b5563;
+    }
+  }
+
+  .addBankButton,
+  .syncButton {
+    width: 100%;
+    margin-top: 16px;
+    background-color: #8c52ff;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 4px;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    &:hover {
+      background-color: #3b82f6;
+    }
+  }
+
+  .syncButton {
+    background-color: #10b981;
+
+    &:hover {
+      background-color: #16a34a;
+    }
+  }
+
+  .institutionFallback {
+    font-size: 0.9rem;
+    color: #ffffff;
+    background-color: #4a5568;
+    padding: 4px 8px;
+    border-radius: 4px;
+    margin-right: 12px;
+  }
+
+  .accountList {
+    margin-top: 12px;
+  }
+}

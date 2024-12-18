@@ -1,0 +1,101 @@
+.topMerchantsBox {
+  padding: 20px;
+  background-color: #1e293b; /* Slightly lighter than the page background */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+
+  .title {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ffffff; /* Bright blue for title */
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+
+  .error {
+    text-align: center;
+    color: #f87171; /* Bright red for errors */
+    font-weight: bold;
+  }
+
+  .noData {
+    text-align: center;
+    color: #9ca3af;
+    font-size: 14px;
+  }
+
+  .tableHeader {
+    color: #cbd5e1 !important; /* Light gray for header text */
+    font-weight: bold !important;
+    font-size: 16px !important;
+    background-color: #243b55 !important; /* Slightly lighter background */
+    padding: 12px !important;
+    border-bottom: 2px solid #475569 !important;
+  }
+
+  .tableRow {
+    background-color: #2d3e50; /* Darker background for rows */
+    transition: background-color 0.3s ease;
+    &:nth-child(even) {
+      background-color: #334155; /* Alternate row color */
+    }
+    &:hover {
+      background-color: #475569; /* Highlight on hover */
+    }
+  }
+
+  .merchantName {
+    color: #e5e7eb !important; /* Slightly brighter text */
+    font-size: 15px;
+    font-weight: 500; /* Semi-bold for better visibility */
+    padding: 10px;
+  }
+
+  .amountSpent {
+    color: #10b981 !important; /* Green for spending */
+    font-size: 15px;
+    font-weight: bold;
+    padding: 10px;
+    text-align: right; /* Align with the column header */
+  }
+
+  .table {
+    width: 100%;
+    border-spacing: 0;
+    border-collapse: collapse;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .monthSelector {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+
+  .fetchButton {
+    color: #8c52ff !important; /* Purple text color */
+    border: 1px solid #8c52ff !important; /* Purple border */
+    padding: 6px 12px;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    background-color: transparent;
+
+    &:hover {
+      background-color: #8c52ff !important; /* Purple background on hover */
+      color: #ffffff !important; /* White text on hover */
+    }
+  }
+  .monthInput {
+    &::-webkit-calendar-picker-indicator {
+      color: #10b981;
+    }
+  }
+  
+
+  
+  
+}

@@ -1,0 +1,22 @@
+.dashboard {
+  background-color: #000000; /* Matches the dark theme */
+  color: #f3f4f6; /* Light text color for contrast */
+  min-height: 100vh;
+  padding-top: 4rem; /* Adjust for Navbar */
+}
+
+.welcomeSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 4rem); /* Full height minus Navbar */
+  text-align: center;
+
+  .welcomeText {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #15ffd0; /* Neon green-blue color */
+    text-shadow: 0 4px 6px rgba(21, 255, 208, 0.6);
+  }
+}

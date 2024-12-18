@@ -1,0 +1,93 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.widget {
+  background: #1e293b;
+  border-radius: 10px;
+  padding: 20px;
+  width: 90%;
+  max-width: 800px;
+  max-height: 90%;
+  overflow-y: auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.closeButton {
+  margin-bottom: 40px;
+  align-self: flex-end;
+  background-color: #dc2626;
+  color: #ffffff;
+  &:hover {
+    background-color: #b91c1c;
+  }
+}
+
+.title {
+  color: #10b981;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.monthGroup {
+  margin-top: 20px;
+
+  .monthTitle {
+    font-weight: bold;
+    color: #10b981;
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+  }
+}
+
+.transaction {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #334155;
+}
+
+.transactionDate {
+  flex: 1;
+  color: #9ca3af;
+}
+
+.merchantName {
+  flex: 3;
+  color: #ffffff;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.accountInfo {
+  flex: 3;
+  display: flex;
+  align-items: center;
+
+  .bankLogo {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+  }
+
+  .accountName {
+    color: #9ca3af;
+  }
+}
+
+.amount {
+  flex: 1;
+  text-align: right;
+  font-weight: bold;
+}

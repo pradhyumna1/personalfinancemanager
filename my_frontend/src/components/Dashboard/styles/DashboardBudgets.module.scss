@@ -1,0 +1,35 @@
+.dashboardBudgets {
+    padding: 20px;
+    background-color: #1f2937;
+    border-radius: 8px;
+    text-align: center;
+    color: #ffffff;
+  
+    .progressBar {
+      background-color: #374151;
+      border-radius: 8px;
+      overflow: hidden;
+      height: 20px;
+      margin: 10px 0;
+  
+      .progress {
+        height: 100%;
+        background-color: #10b981;
+      }
+    }
+  
+    .createBudgetButton {
+      background-color: #8c52ff;
+      color: #ffffff;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 10px;
+  
+      &:hover {
+        background-color: #3b82f6;
+      }
+    }
+  }
+  

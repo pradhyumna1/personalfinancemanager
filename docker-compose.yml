@@ -1,0 +1,57 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:13
+    environment:
+      POSTGRES_DB: pfm_dashboard_db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    networks:
+      - app-network
+
+  app:
+    build:
+      context: ./my_backend
+      dockerfile: Dockerfile
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/pfm_dashboard_db
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: password
+      SPRING_PROFILES_ACTIVE: docker
+      PLAID_CLIENT_ID: 67310306fda72b001a3538ba
+      PLAID_SECRET: 5da0805774a54d79061e4f8365dfeb
+      PLAID_ENVIRONMENT: sandbox
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+    networks:
+      - app-network
+
+  frontend:
+    build:
+      context: ./my_frontend  # Path to the frontend
+      dockerfile: Dockerfile  # Specify Dockerfile for frontend
+    environment:
+      REACT_APP_API_URL: http://localhost:8080/api
+    ports:
+      - "3000:3000"
+    depends_on:
+      - app
+    networks:
+      - app-network
+
+volumes:
+  pgdata:
+
+networks:
+  app-network:
+    driver: bridge
+x-environment:
+  PLAID_CLIENT_ID: ${PLAID_CLIENT_ID}
+  PLAID_SECRET: ${PLAID_SECRET}

@@ -1,0 +1,70 @@
+.homePage {
+  background-color: #000000; /* Matches the dark theme */
+  color: #f3f4f6; /* Light text color for contrast */
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden; /* Ensures ellipse doesn't scroll out */
+
+  .header {
+    z-index: 10;
+    position: relative; /* Keeps it above other elements */
+  }
+
+  .content {
+    margin-top: 80px; /* Add margin to push content below the navbar */
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding: 2rem;
+
+    .featureSection {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+
+      .textContainer {
+        max-width: 50%;
+      }
+
+      .featureTitle {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: #15ffd0;
+        margin-bottom: 1rem;
+        text-shadow: 0 4px 6px rgba(21, 255, 208, 0.6);
+      }
+
+      .featureDescription {
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+        color: #e5e7eb;
+      }
+
+      .imageContainer {
+        max-width: 40%;
+        display: flex;
+        justify-content: center;
+
+        .featureImage {
+          max-width: 100%;
+          height: auto;
+          border-radius: 8px;
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+        }
+      }
+    }
+  }
+
+  .ellipse {
+    position: absolute;
+    top: 0;
+    right: -200px;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(21, 255, 208, 0.5), transparent);
+    filter: blur(120px);
+    z-index: 0; /* Ensures it's below other elements */
+    pointer-events: none; /* Prevents the ellipse from capturing clicks */
+  }
+}

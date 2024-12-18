@@ -1,0 +1,69 @@
+.date-filter-container {
+  display: flex;
+  align-items: center; /* Aligns inputs and button in a row */
+  justify-content: center; /* Centers the filter */
+  gap: 20px; /* Spacing between inputs and button */
+  margin: 20px 0;
+}
+
+.date-input-wrapper {
+  display: flex;
+  gap: 10px; /* Spacing between date input fields */
+}
+
+.input-container {
+  position: relative;
+  display: inline-block;
+}
+
+.date-filter-input {
+  width: 150px;
+  padding: 10px;
+  font-size: 1rem;
+  color: #00ff7f; /* Matches the requested color for text */
+  border: 1px solid #2d3748; /* Matches Tailwind border-gray-700 */
+  border-radius: 4px;
+  background-color: #1a202c; /* Matches the dark theme */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  caret-color: #00ff7f; /* Matches the placeholder text color */
+  
+  &::placeholder {
+    color: #00ff7f; /* Matches the requested placeholder color */
+    opacity: 0.8; /* Slightly faded for distinction */
+  }
+
+  &:hover {
+    border-color: #63b3ed; /* Matches Tailwind blue-400 */
+  }
+
+  &:focus {
+    border-color: #4299e1; /* Matches Tailwind blue-500 */
+    outline: none;
+    box-shadow: 0 0 6px rgba(99, 179, 237, 0.5); /* Subtle blue glow */
+  }
+}
+
+.date-filter-button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #1a202c; /* Matches Tailwind text-gray-900 */
+  background-color: #00ff7f; /* Matches requested theme */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  white-space: nowrap;
+
+  &:hover {
+    background-color: #2af598; /* Slightly lighter green */
+    transform: scale(1.05); /* Slightly enlarges on hover */
+  }
+
+  &:disabled {
+    background-color: #4a5568; /* Matches Tailwind gray-600 */
+    cursor: not-allowed;
+    color: #cbd5e0; /* Matches Tailwind gray-400 */
+  }
+}

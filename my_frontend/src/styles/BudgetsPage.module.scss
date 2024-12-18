@@ -1,0 +1,106 @@
+.budgetsPage {
+  padding: 20px;
+  background-color: #1e293b;
+  color: #ffffff;
+  .pageTitle {
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ffffff;
+    font-weight: bold;
+  }
+  
+}
+
+.totalBudget {
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: #243b55;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.totalSpentAmount,
+.totalBudgetAmount {
+  margin-bottom: 10px;
+}
+
+.progressWrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.progressLeft,
+.progressRight {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.totalProgressBar,
+.categoryProgressBar {
+  flex-grow: 1;
+  height: 10px;
+  border-radius: 5px;
+}
+
+.exceeded {
+  background-color: #dc2626; /* Red for exceeded budget */
+  max-width: 100%; /* Ensure it doesn't visually overflow */
+}
+
+.withinBudget {
+  background-color: #16a34a; /* Green for within budget */
+}
+
+
+.categories {
+  margin-top: 20px;
+}
+
+.category {
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: #334155;
+  border-radius: 8px;
+}
+
+.categoryHeader {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.error {
+  color: #f87171;
+  font-weight: bold;
+}
+
+.changeMonth {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.changeMonthButton {
+  color: #8c52ff !important; /* Purple text color */
+  border: 1px solid #8c52ff !important; /* Purple border */
+  padding: 6px 12px;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  background-color: transparent;
+
+  &:hover {
+    background-color: #8c52ff !important; /* Purple background on hover */
+    color: #ffffff !important; /* White text on hover */
+  }
+}
+
+.addButton,
+.rebalanceButton {
+  color: #38bdf8;
+  border: 1px solid #38bdf8;
+}

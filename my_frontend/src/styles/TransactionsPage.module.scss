@@ -1,0 +1,128 @@
+.transactionsPage {
+    background-color: #111827; /* Dark background */
+    color: #ffffff; /* White text */
+    min-height: 100vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .pageTitle {
+    font-size: 2rem;
+    color: #10b981; /* Green text */
+  }
+  
+  .addButton {
+    background-color: #10b981; /* Purple background */
+    color: #ffffff; /* White text */
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-transform: none;
+    font-weight: bold;
+    &:hover {
+      background-color: #10b981; /* Slightly darker purple */
+    }
+  }
+  
+  .searchBar {
+    width: 100%;
+    margin: 20px 0;
+    
+
+  }
+  
+  .searchInput {
+    & .MuiOutlinedInput-root {
+      background-color: #10b981; /* Slightly lighter dark background */
+      color: #ffffff;
+      border-radius: 5px;
+  
+      & fieldset {
+        border-color: #10b981; /* Green border */
+      }
+  
+      &:hover fieldset {
+        border-color: #8c52ff; /* Purple border on hover */
+      }
+  
+      &.Mui-focused fieldset {
+        border-color: #10b981; /* Green border on focus */
+      }
+    }
+  
+    & input {
+      color: #ffffff; /* White input text */
+    }
+  }
+  
+  .tableContainer {
+    width: 100%;
+    overflow-x: auto;
+    background-color: #1f2937; /* Darker table background */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  
+    table {
+      width: 100%;
+      border-spacing: 0;
+  
+      th, td {
+        font-size: 20px; /* Adjust the font size as needed */
+        color: #ffffff; /* Ensure text is visible on dark background */
+        padding: 10px 15px;
+        text-align: left; /* Optional: Align text */
+      }
+  
+      th {
+        font-weight: bold;
+        text-transform: uppercase; /* Optional: Make header text uppercase */
+      }
+  
+      td {
+        vertical-align: middle;
+      }
+    }
+  }
+  
+  
+  .transactionsPage table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .transactionsPage th {
+    background-color: #8c52ff; /* Green background for header */
+    color: #ffffff; /* White text */
+    text-align: left;
+    padding: 10px;
+  }
+  
+  .transactionsPage td {
+    padding: 10px;
+    border-bottom: 1px solid #374151; /* Gray border */
+    color: #ffffff; /* White text */
+  }
+  
+  .transactionsPage tr:hover {
+    background-color: #2d3748; /* Slightly lighter dark hover effect */
+    cursor: pointer;
+  }
+  .applyButton {
+    background-color: #8c52ff; // Purple background
+    color: #fff; // White text
+    &:hover {
+      background-color: #10b981; // Green background on hover
+    }
+  }
+  
+  

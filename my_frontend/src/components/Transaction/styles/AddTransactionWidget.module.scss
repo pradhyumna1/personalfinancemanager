@@ -1,0 +1,74 @@
+.widget {
+  background-color: #1e293b; 
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  position: relative;
+}
+
+.title {
+  color: #ffffff; 
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.inputField {
+  margin-bottom: 15px;
+
+  input {
+    color: #ffffff; 
+    background-color: #1f2937; 
+    border-radius: 4px;
+  }
+
+  .MuiOutlinedInput-root {
+    fieldset {
+      border-color: #8c52ff;
+    }
+
+    &:hover fieldset {
+      border-color: #10b981;
+    }
+
+    &.Mui-focused fieldset {
+      border-color: #10b981;
+    }
+  }
+}
+
+.toggleButtonGroup {
+  display: flex;
+  justify-content: space-between;
+
+  .MuiToggleButton-root {
+    flex: 1;
+    margin: 0 5px;
+    color: #ffffff;
+    background-color: #374151; 
+    border: none;
+
+    &.Mui-selected {
+      background-color: #8c52ff;
+      color: #ffffff; 
+    }
+
+    &:hover {
+      background-color: #10b981; 
+    }
+  }
+}
+
+.submitButton {
+  background-color: #8c52ff; 
+  color: #ffffff;
+  font-weight: bold;
+  text-transform: uppercase;
+
+  &:hover {
+    background-color: #10b981; 
+  }
+}
